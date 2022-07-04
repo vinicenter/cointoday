@@ -1,0 +1,21 @@
+html[data-theme='dark'], :root {
+  --navbarBackgroundColor: #212529;
+  --navbarLinkColor: #ffffff8c;
+  --navbarLinkColorHover: #fff;
+  --navbarTextTitleColor: #fff;
+  --containerBackgroundColor: #212529;
+  --textColor: #fff;
+  --textColorPlaceholder: #ccc;
+  --textColorHover: #ccc;
+}
+
+html[data-theme='light'] {
+  --navbarBackgroundColor: #fff;
+  --navbarLinkColor: #000;
+  --navbarLinkColorHover: #ccc;
+  --navbarTextTitleColor: #000;
+  --containerBackgroundColor: #fff;
+  --textColor: #000;
+  --textColorPlaceholder: #ccc;
+  --textColorHover: #ccc;
+}
