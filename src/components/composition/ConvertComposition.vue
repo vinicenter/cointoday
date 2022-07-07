@@ -8,6 +8,7 @@ import logo from '@/assets/logo.png';
 import InputComponent from '@/components/core/form/InputComponent.vue';
 import TextComponent from '@/components/core/TextComponent.vue';
 import IconComponent from '@/components/core/IconComponent.vue';
+import DataListComponent from '@/components/core/form/DataListComponent.vue';
 </script>
 
 <script lang="ts">
@@ -20,7 +21,10 @@ export default {
         amountFrom: 1,
         amountTo: 0,
       },
-      coins: {},
+      coins: {
+        crypto: [],
+        fiat: [],
+      },
     };
   },
   created() {
@@ -79,6 +83,27 @@ export default {
       saveEntityCache(this.entity);
     },
   },
+  computed: {
+    getCoinList() {
+      const coinsReturn : Array<Object> = [];
+
+      this.coins.crypto.forEach((entity) => {
+        coinsReturn.push({
+          value: entity,
+          label: entity,
+        });
+      });
+
+      this.coins.fiat.forEach((entity) => {
+        coinsReturn.push({
+          value: entity,
+          label: entity,
+        });
+      });
+
+      return coinsReturn;
+    },
+  },
   components: {
     InputComponent,
     IconComponent,
@@ -100,9 +125,15 @@ export default {
       </TextComponent>
 
       <div>
+        <DataListComponent
+          id="coinsDataList"
+          :list="getCoinList"
+        />
+
         <InputComponent
           name="from"
           label=""
+          list="coinsDataList"
           placeholder="From"
           v-model="entity.from"
           @change="update()"
@@ -136,6 +167,7 @@ export default {
         <InputComponent
           name="To"
           label=""
+          list="coinsDataList"
           placeholder="To"
           v-model="entity.to"
           @change="update()"
