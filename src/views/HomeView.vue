@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import PageComposition from '@/components/composition/PageComposition.vue';
+import ConvertComposition from '@/components/composition/ConvertComposition.vue';
 </script>
 
 <script lang="ts">
@@ -17,6 +18,10 @@ export default {
     :isDescriptionVisible="false"
     :isTitleVisible="false"
   >
-    Home
+    <div
+      class="col d-flex justify-content-center flex-column align-items-center"
+    >
+      <ConvertComposition />
+    </div>
   </PageComposition>
 </template>

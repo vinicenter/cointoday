@@ -1,5 +1,31 @@
 {
   "app_name": "cointoday",
   "app_description": "convert your coins",
-  "app_repo": "https://github.com/vinicenter/cointoday"
+  "app_repo": "https://github.com/vinicenter/cointoday",
+  "notifications": {
+    "convert": {
+      "success": {
+        "title": "Success",
+        "text": "Converted successfully",
+        "type": "success"
+      },
+      "error": {
+        "title": "Error",
+        "text": "An error has occurred while converting, check your internet connection",
+        "type": "error"
+      }
+    },
+    "config": {
+      "invertCoins": {
+        "title": "Invert coins",
+        "text": "Coins were inverted successfully",
+        "type": "warn"
+      },
+      "themeChanged": {
+        "title": "Theme changed",
+        "text": "Theme changed successfully",
+        "type": "warn"
+      }
+    }
+  }
 }

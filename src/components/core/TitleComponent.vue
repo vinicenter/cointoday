@@ -13,19 +13,19 @@ export default {
 <h1 v-if="type == 'h1'">
   <slot></slot>
 </h1>
-<h2 v-if="type == 'h2'">
+<h2 v-else-if="type == 'h2'">
   <slot></slot>
 </h2>
-<h3 v-if="type == 'h3'">
+<h3 v-else-if="type == 'h3'">
   <slot></slot>
 </h3>
-<h4 v-if="type == 'h4'">
+<h4 v-else-if="type == 'h4'">
   <slot></slot>
 </h4>
-<h5 v-if="type == 'h5'">
+<h5 v-else-if="type == 'h5'">
   <slot></slot>
 </h5>
-<h6 v-if="type == 'h6'">
+<h6 v-else-if="type == 'h6'">
   <slot></slot>
 </h6>
 </template>

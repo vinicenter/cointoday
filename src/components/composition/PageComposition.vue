@@ -41,3 +41,9 @@ export default {
     <slot />
   </div>
 </template>
+
+<style lang="scss" scoped>
+.container {
+  margin-top: 50px;
+}
+</style>

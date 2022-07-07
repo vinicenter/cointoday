@@ -11,8 +11,37 @@ export default {
 </script>
 
 <template>
-  <NavbarComposition />
+  <NavbarComposition>
+    <template v-slot:link>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <RouterLink to="/" class="nav-link">Home</RouterLink>
+        </li>
+      </ul>
+      <!-- <ul class="navbar-nav d-flex">
+        <li class="nav-item">
+          <a
+            :href="content.app_repo"
+            class="text-decoration-none"
+            target="_blank"
+            tabindex="0"
+          >
+            <IconComponent
+              class="icon"
+              icon="ph-github-logo"
+              :size="32"
+            />
+          </a>
+        </li>
+      </ul> -->
+    </template>
+  </NavbarComposition>
   <RouterView />
+  <notifications
+    closeOnClick
+    position="bottom left"
+    ignoreDuplicates
+  />
 </template>
 
 <style scoped>

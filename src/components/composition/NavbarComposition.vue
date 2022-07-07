@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import content from '@/content.json';
 import logo from '@/assets/logo.png';
-import IconComponent from '../core/IconComponent.vue';
-</script>
-
-<script lang="ts">
-export default {
-  components: { IconComponent },
-};
 </script>
 
 <template>
@@ -18,11 +11,10 @@ export default {
           :src="logo"
           alt="app logo"
           width="50"
-          height="50"
           class="d-inline-block align-text-top"
         >
         <li class="nav-item">
-          <a class="nav-link">
+          <a class="nav-link app-name">
             {{content.app_name}}
           </a>
         </li>
@@ -36,26 +28,7 @@ export default {
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <RouterLink to="/" class="nav-link">Home</RouterLink>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-flex">
-          <li class="nav-item">
-            <a
-              :href="content.app_repo"
-              class="text-decoration-none"
-              target="_blank"
-            >
-              <IconComponent
-                icon="ph-github-logo"
-                size="32"
-              />
-              repository link
-            </a>
-          </li>
-        </ul>
+        <slot name="link"/>
       </div>
     </div>
   </nav>
