@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import NavbarComposition from '@/components/composition/NavbarComposition.vue';
+import IconComponent from '@/components/core/IconComponent.vue';
+import content from '@/content.json';
 </script>
 
 <script lang="ts">
@@ -18,7 +20,7 @@ export default {
           <RouterLink to="/" class="nav-link">Home</RouterLink>
         </li>
       </ul>
-      <!-- <ul class="navbar-nav d-flex">
+      <ul class="navbar-nav d-flex">
         <li class="nav-item">
           <a
             :href="content.app_repo"
@@ -33,7 +35,7 @@ export default {
             />
           </a>
         </li>
-      </ul> -->
+      </ul>
     </template>
   </NavbarComposition>
   <RouterView />
@@ -45,6 +47,10 @@ export default {
 </template>
 
 <style scoped>
+.nav-icon {
+  content: 'a';
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
