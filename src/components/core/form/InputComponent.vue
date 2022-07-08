@@ -37,6 +37,10 @@ export default {
       type: String,
       default: 'text',
     },
+    list: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
@@ -65,6 +69,7 @@ export default {
         :disabled="isDisabledData"
         :value="$attrs.modelValue"
         :type="type"
+        :list="list"
         @change="update($event)"
       >
       <div class="form-text">
