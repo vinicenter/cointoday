@@ -15,11 +15,11 @@ export default {
 <template>
   <datalist :id="id">
     <option
-      v-for="(name, value) in list"
-      :key="name"
-      :value="value"
+      v-for="(entity, index) in list"
+      :key="index"
+      :value="entity.value"
     >
-      {{ name }}
+      {{ entity.name }}
     </option>
   </datalist>
 </template>
