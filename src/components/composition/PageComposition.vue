@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" style="margin-top: 0px">
     <div v-if="isTitleVisible">
       <TitleComponent type="h2">{{ title }}</TitleComponent>
     </div>
