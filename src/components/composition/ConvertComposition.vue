@@ -90,14 +90,14 @@ export default {
       this.coins.crypto.forEach((entity) => {
         coinsReturn.push({
           value: entity,
-          label: entity,
+          name: entity,
         });
       });
 
       this.coins.fiat.forEach((entity) => {
         coinsReturn.push({
           value: entity,
-          label: entity,
+          name: entity,
         });
       });
 
@@ -114,7 +114,7 @@ export default {
 
 <template>
   <div>
-    <div class="d-flex align-items-center flex-column">
+    <div class="col d-flex justify-content-center flex-column align-items-center">
       <img
         :src="logo"
         alt="app logo"
@@ -153,14 +153,14 @@ export default {
             tabindex="0"
             icon="ph-swap"
             @click="invertCoins()"
-            @keydown="invertCoins()"
+            @keydown.enter="invertCoins()"
           />
 
           <IconComponent
             tabindex="0"
             icon="ph-arrows-clockwise"
             @click="update()"
-            @keydown="update()"
+            @keydown.enter="update()"
           />
         </div>
 
