@@ -5,25 +5,18 @@
 export default {
   emits: ['update:modelValue'],
   props: {
-    name: {
-      type: String,
-      default: '',
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
+    name: String,
+    placeholder: String,
+    label: String,
+    footer: String,
+    list: String,
     col: {
       type: String,
       default: 'col-12',
     },
-    label: {
+    type: {
       type: String,
-      default: '',
-    },
-    footer: {
-      type: String,
-      default: '',
+      default: 'text',
     },
     isDisabled: {
       type: Boolean,
@@ -32,14 +25,6 @@ export default {
     isReadonly: {
       type: Boolean,
       default: false,
-    },
-    type: {
-      type: String,
-      default: 'text',
-    },
-    list: {
-      type: String,
-      default: '',
     },
   },
   data() {
