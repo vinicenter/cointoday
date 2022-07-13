@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavbarComposition from '@/components/composition/NavbarComposition.vue';
-import IconComponent from '@/components/core/IconComponent.vue';
+import IconLinkComponent from '@/components/core/icon/IconLinkComponent.vue';
 import content from '@/content.json';
 import { toggleThemeCache } from '@/lib/localStorage';
 </script>
@@ -9,7 +9,7 @@ import { toggleThemeCache } from '@/lib/localStorage';
 export default {
   components: {
     NavbarComposition,
-    IconComponent,
+    IconLinkComponent,
   },
 };
 </script>
@@ -24,30 +24,17 @@ export default {
       </ul>
       <ul class="navbar-nav d-flex">
         <li class="nav-item">
-          <a
+          <IconLinkComponent
             :href="content.app_repo"
-            class="text-decoration-none"
-            target="_blank"
-            tabindex="0"
-          >
-            <IconComponent
-              class="icon"
-              icon="ph-github-logo"
-              :size="32"
-            />
-          </a>
-          <a
+            :size="32"
+            icon="ph-github-logo"
+          />
+
+          <IconLinkComponent
             @click="toggleThemeCache()"
-            @keydown.enter="toggleThemeCache()"
-            class="text-decoration-none"
-            tabindex="0"
-          >
-            <IconComponent
-              class="icon"
-              icon="ph-lightbulb"
-              :size="32"
-            />
-          </a>
+            :size="32"
+            icon="ph-lightbulb"
+          />
         </li>
       </ul>
     </template>
