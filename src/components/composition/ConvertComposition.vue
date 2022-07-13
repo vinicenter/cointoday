@@ -7,7 +7,7 @@ import logo from '@/assets/logo.png';
 
 import InputComponent from '@/components/core/form/InputComponent.vue';
 import TextComponent from '@/components/core/TextComponent.vue';
-import IconComponent from '@/components/core/IconComponent.vue';
+import IconLinkComponent from '@/components/core/icon/IconLinkComponent.vue';
 import DataListComponent from '@/components/core/form/DataListComponent.vue';
 </script>
 
@@ -106,8 +106,9 @@ export default {
   },
   components: {
     InputComponent,
-    IconComponent,
+    IconLinkComponent,
     TextComponent,
+    DataListComponent,
   },
 };
 </script>
@@ -149,15 +150,13 @@ export default {
         />
 
         <div class="d-flex justify-content-center">
-          <IconComponent
-            tabindex="0"
+          <IconLinkComponent
             icon="ph-swap"
             @click="invertCoins()"
             @keydown.enter="invertCoins()"
           />
 
-          <IconComponent
-            tabindex="0"
+          <IconLinkComponent
             icon="ph-arrows-clockwise"
             @click="update()"
             @keydown.enter="update()"
