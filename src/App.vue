@@ -2,6 +2,7 @@
 import NavbarComposition from '@/components/composition/NavbarComposition.vue';
 import IconComponent from '@/components/core/IconComponent.vue';
 import content from '@/content.json';
+import { toggleThemeCache } from '@/lib/localStorage';
 </script>
 
 <script lang="ts">
@@ -31,6 +32,18 @@ export default {
             <IconComponent
               class="icon"
               icon="ph-github-logo"
+              :size="32"
+            />
+          </a>
+          <a
+            @click="toggleThemeCache()"
+            @keydown.enter="toggleThemeCache()"
+            class="text-decoration-none"
+            tabindex="0"
+          >
+            <IconComponent
+              class="icon"
+              icon="ph-lightbulb"
               :size="32"
             />
           </a>
