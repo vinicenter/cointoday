@@ -9,6 +9,7 @@ import { toggleThemeCache } from '@/lib/localStorage';
 export default {
   components: {
     NavbarComposition,
+    IconComponent,
   },
 };
 </script>
