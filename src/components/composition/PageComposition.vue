@@ -6,14 +6,8 @@ import TextComponent from '@/components/core/TextComponent.vue';
 <script lang="ts">
 export default {
   props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    description: {
-      type: String,
-      default: '',
-    },
+    title: String,
+    description: String,
     isDescriptionVisible: {
       type: Boolean,
       default: true,
