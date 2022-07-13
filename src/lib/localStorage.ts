@@ -30,3 +30,11 @@ export function saveThemeCache(
 export function getThemeCache() {
   return <string> localStorage.getItem('theme') || 'light';
 }
+
+export function toggleThemeCache() {
+  if (getThemeCache() === 'light') {
+    saveThemeCache('dark');
+  } else {
+    saveThemeCache('light');
+  }
+}
