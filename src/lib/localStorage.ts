@@ -17,3 +17,16 @@ export function getEntityCache() {
     <string> localStorage.getItem('entity'),
   );
 }
+
+export function saveThemeCache(
+  theme : string,
+) {
+  localStorage.setItem(
+    'theme',
+    theme,
+  );
+}
+
+export function getThemeCache() {
+  return <string> localStorage.getItem('theme') || 'light';
+}
