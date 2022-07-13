@@ -1,19 +1,16 @@
 <script lang="ts">
 export default {
   props: {
-    id: {
-      type: String,
-      default: '',
-    },
-    list: {
-      type: Array,
-    },
+    id: String,
+    list: Array,
   },
 };
 </script>
 
 <template>
-  <datalist :id="id">
+  <datalist
+    :id="id"
+  >
     <option
       v-for="(entity, index) in list"
       :key="index"
